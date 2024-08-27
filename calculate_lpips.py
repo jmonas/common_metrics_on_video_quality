@@ -9,7 +9,7 @@ import lpips
 spatial = True         # Return a spatial map of perceptual distance.
 
 # Linearly calibrated models (LPIPS)
-loss_fn = lpips.LPIPS(net='alex', spatial=spatial) # Can also set net = 'squeeze' or 'vgg'
+loss_fn = lpips.LPIPS(net='alex', spatial=spatial, verbose=False) # Can also set net = 'squeeze' or 'vgg'
 # loss_fn = lpips.LPIPS(net='alex', spatial=spatial, lpips=False) # Can also set net = 'squeeze' or 'vgg'
 
 def trans(x):

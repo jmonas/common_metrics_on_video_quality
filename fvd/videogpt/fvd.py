@@ -15,7 +15,7 @@ def load_i3d_pretrained(device=torch.device('cpu')):
     from .pytorch_i3d import InceptionI3d
     i3d = InceptionI3d(400, in_channels=3).eval().to(device)
     i3d.load_state_dict(torch.load(filepath, map_location=device))
-    i3d = torch.nn.DataParallel(i3d)
+    # i3d = torch.nn.DataParallel(i3d)
     return i3d
 
 def preprocess_single(video, resolution, sequence_length=None):
